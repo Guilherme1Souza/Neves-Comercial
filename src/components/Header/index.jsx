@@ -70,7 +70,7 @@ const IconLabel = styled.span`
 const NavWrapper = styled.nav`
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 3.5rem;
   font-size: 0.875rem;
   color: #374151;
   padding: 0.75rem 0;
@@ -87,7 +87,7 @@ const NavItem = styled.div`
 const NavItemContent = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.9rem;
   font-weight: 600; 
   cursor: pointer;
   user-select: none;
