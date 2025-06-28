@@ -2,17 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import styled from "styled-components";
-
-const opcoesNav = [
-  { nome: "Revestimentos e Tintas", slug: "revestimentos-e-tintas" },
-  { nome: "Aquecedores", slug: "aquecedores" },
-  { nome: "Manutenção", slug: "manutencao" },
-  { nome: "Iluminação", slug: "iluminacao" },
-  { nome: "Filtros", slug: "filtros" },
-  { nome: "Pisos", slug: "pisos" },
-  { nome: "Cascatas", slug: "cascatas" },
-  { nome: "Nossas Lojas", slug: "lojas" },
-];
+import opcoesNav from "@data/opcoesNav.json";
 
 const Container = styled.div`
   position: relative;
@@ -81,22 +71,22 @@ export default function BuscaNav() {
 
   // Debounce para buscar só depois de 300ms parado
   useEffect(() => {
-  const handler = setTimeout(() => {
-    if (busca.trim()) {
-      const filtrados = opcoesNav.filter((item) =>
-        item.nome.toLowerCase().startsWith(busca.toLowerCase())
-      );
-      setResultados(filtrados);
-      setShowDropdown(filtrados.length > 0);
-    } else {
-      setResultados([]);
-      setShowDropdown(false);
-    }
-    setActiveIndex(-1);
-  }, 300);
+    const handler = setTimeout(() => {
+      if (busca.trim()) {
+        const filtrados = opcoesNav.filter((item) =>
+          item.nome.toLowerCase().startsWith(busca.toLowerCase())
+        );
+        setResultados(filtrados);
+        setShowDropdown(filtrados.length > 0);
+      } else {
+        setResultados([]);
+        setShowDropdown(false);
+      }
+      setActiveIndex(-1);
+    }, 300);
 
-  return () => clearTimeout(handler);
-}, [busca]);
+    return () => clearTimeout(handler);
+  }, [busca]);
 
 
   // Fecha dropdown ao clicar fora

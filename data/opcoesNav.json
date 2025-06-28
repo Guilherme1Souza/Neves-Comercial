@@ -1,0 +1,10 @@
+[
+  { "nome": "Revestimentos e Tintas", "slug": "revestimentos-e-tintas" },
+  { "nome": "Aquecedores", "slug": "aquecedores" },
+  { "nome": "Manutenção", "slug": "manutencao" },
+  { "nome": "Iluminação", "slug": "iluminacao" },
+  { "nome": "Filtros", "slug": "filtros" },
+  { "nome": "Pisos", "slug": "pisos" },
+  { "nome": "Cascatas", "slug": "cascatas" },
+  { "nome": "Nossas Lojas", "slug": "lojas" }
+]
