@@ -29,12 +29,14 @@ const TopBar = styled.div`
 
 const LogoContainer = styled.div`
   display: flex;
+  flex-direction: column;
+  text-align: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 `;
 
 const LogoText = styled.div`
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1rem;
 `;
