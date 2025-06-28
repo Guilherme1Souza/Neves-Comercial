@@ -8,7 +8,8 @@ import Logo from "../../icons/logo.svg";
 
 
 const HeaderWrapper = styled.header`
-  background-color: #f9fafb;
+  background-color: #ebebeb;
+  width: 100%;
 `;
 
 const TopBar = styled.div`
@@ -74,7 +75,6 @@ const NavWrapper = styled.nav`
   font-size: 0.875rem;
   color: #374151;
   padding: 0.75rem 0;
-  border-top: 1px solid #e5e7eb;
   position: relative;
 `;
 
