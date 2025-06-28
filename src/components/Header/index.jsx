@@ -41,7 +41,7 @@ const LogoText = styled.div`
 const HeaderContent = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
   align-items: center;
 `;
 
