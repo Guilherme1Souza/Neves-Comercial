@@ -1,0 +1,72 @@
+[
+  {
+    "modulo": "Materiais de Construção",
+    "itens": [
+      { "nome": "Construção", "slug": "construcao" },
+      { "nome": "Cimento e Argamassa", "slug": "cimento-argamassa" },
+      { "nome": "Areia e Brita", "slug": "areia-brita" },
+      { "nome": "Impermeabilizantes", "slug": "impermeabilizantes" },
+      { "nome": "Vedantes e Selantes", "slug": "vedantes-selantes" },
+      { "nome": "Calhas e Rufos", "slug": "calhas-rufos" },
+      { "nome": "Coberturas", "slug": "coberturas" },
+      { "nome": "Grades e Portões", "slug": "grades-portoes" }
+    ]
+  },
+  {
+    "modulo": "Hidráulica e Saneamento",
+    "itens": [
+      { "nome": "Hidráulica", "slug": "hidraulica" },
+      { "nome": "Caixas d’água", "slug": "caixas-dagua" },
+      { "nome": "Tubos e Conexões", "slug": "tubos-conexoes" },
+      { "nome": "Piscina", "slug": "piscina" }
+    ]
+  },
+  {
+    "modulo": "Elétrica",
+    "itens": [
+      { "nome": "Elétrica", "slug": "eletrica" },
+      { "nome": "Iluminação", "slug": "iluminacao" },
+      { "nome": "Cabos Elétricos", "slug": "cabos-eletricos" },
+      { "nome": "Disjuntores", "slug": "disjuntores" },
+      { "nome": "Quadros de Distribuição", "slug": "quadros-distribuicao" },
+      { "nome": "Interruptores e Tomadas", "slug": "interruptores-tomadas" }
+    ]
+  },
+  {
+    "modulo": "Acabamentos",
+    "itens": [
+      { "nome": "Tintas e Acessórios", "slug": "tintas-acessorios" },
+      { "nome": "Pisos e Revestimentos", "slug": "pisos-revestimentos" },
+      { "nome": "Portas e Janelas", "slug": "portas-janelas" },
+      { "nome": "Louças", "slug": "loucas" },
+      { "nome": "Metais Sanitários", "slug": "metais-sanitarios" }
+    ]
+  },
+  {
+    "modulo": "Ferramentas e Equipamentos",
+    "itens": [
+      { "nome": "Ferramentas", "slug": "ferramentas" },
+      { "nome": "Organização de Ferramentas", "slug": "organizacao-ferramentas" },
+      { "nome": "Furadeiras", "slug": "furadeiras" },
+      { "nome": "Parafusadeiras", "slug": "parafusadeiras" },
+      { "nome": "Lixas e Abrasivos", "slug": "lixas-abrasivos" },
+      { "nome": "Colas e Adesivos", "slug": "colas-adesivos" },
+      { "nome": "Tramontina", "slug": "tramontina" }
+    ]
+  },
+  {
+    "modulo": "Segurança e EPI",
+    "itens": [
+      { "nome": "Equipamentos de Segurança", "slug": "seguranca" },
+      { "nome": "EPIs", "slug": "epis" }
+    ]
+  },
+  {
+    "modulo": "Lazer e Jardim",
+    "itens": [
+      { "nome": "Jardinagem", "slug": "jardinagem" },
+      { "nome": "Churrasqueiras", "slug": "churrasqueiras" },
+      { "nome": "Moveis para Área Externa", "slug": "moveis-area-externa" }
+    ]
+  }
+]

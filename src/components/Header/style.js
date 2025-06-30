@@ -86,29 +86,45 @@ export const NavItemContent = styled.div`
 `;
 
 export const SubNav = styled.div`
-  ${props => `
-    display: ${props.show ? "block" : "none"};
-  `}
+  display: ${({ show }) => (show ? "grid" : "none")};
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem; 
+
   position: absolute;
   top: 2.5rem;
-  left: 0;
+  left: -4rem;
   background: white;
-  padding: 0.5rem 1rem;
+  padding: 1.5rem 2rem;
+  width: max-content; 
   border: 1px solid #e5e7eb;
   border-radius: 0.375rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   z-index: 1100;
 `;
 
+export const ModuleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+`;
+
+export const ModuleTitle = styled.strong`
+  font-size: 1.1rem;
+  color: #0c4a6e; 
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.15rem;
+  border-bottom: 3px solid #facc15; 
+`;
+
 export const SubNavItem = styled.div`
-  padding: 0.5rem 0.75rem;
-  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #1e293b; 
   cursor: pointer;
-  color: #374151;
-  transition: background 0.2s;
+  padding: 0.15rem 0;
+  transition: color 0.2s;
 
   &:hover {
-    background-color: #4e7dda;
-    color: white;
+    color: #2563eb;
   }
 `;

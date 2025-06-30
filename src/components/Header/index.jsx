@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import departamentos from "@data/departamentos.json";
 import Image from "next/image";
 import BuscaNav from "../BuscaNav";
 import { IoIosHelpCircleOutline, IoIosCall } from "react-icons/io";
@@ -18,6 +19,8 @@ import {
   NavItemContent,
   SubNav,
   SubNavItem,
+  ModuleWrapper,
+  ModuleTitle,
 } from "./style";
 
 
@@ -67,12 +70,16 @@ export default function Header() {
             <RxHamburgerMenu size={20} />
             Todos os departamentos
           </NavItemContent>
+
           <SubNav show={showSubnav}>
-            <SubNavItem>Hidráulica</SubNavItem>
-            <SubNavItem>Elétrica</SubNavItem>
-            <SubNavItem>Jardinagem</SubNavItem>
-            <SubNavItem>Construção</SubNavItem>
-            <SubNavItem>Piscina</SubNavItem>
+            {departamentos.map((modulo) => (
+              <ModuleWrapper key={modulo.modulo}>
+                <ModuleTitle>{modulo.modulo}</ModuleTitle>
+                {modulo.itens.map((dep) => (
+                  <SubNavItem key={dep.slug}>{dep.nome}</SubNavItem>
+                ))}
+              </ModuleWrapper>
+            ))}
           </SubNav>
         </NavItem>
         <NavItem>Revestimentos e Tintas</NavItem>

@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
     background-color: #fff;
     color: #222;
     line-height: 1.5;
+    overflow-y: scroll;
   }
 
   ul, ol {
