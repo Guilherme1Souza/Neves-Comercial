@@ -1,65 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/router";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import styled from "styled-components";
 import opcoesNav from "@data/opcoesNav.json";
+import {
+  Container,
+  SearchBox,
+  Input,
+  Dropdown,
+  Item,
+} from "./style";
 
-const Container = styled.div`
-  position: relative;
-  width: 100%;
-  max-width: 768px;
-`;
-
-const SearchBox = styled.div`
-  display: flex;
-  align-items: center;
-  border: 1px solid #d1d5db;
-  border-radius: 9999px;
-  padding: 0.5rem 1rem;
-  background-color: #fff;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-
-  &:focus-within {
-    outline: 2px solid #000000;
-    outline-offset: 2px;
-  }
-`;
-
-const Input = styled.input`
-  flex: 1;
-  border: none;
-  background: transparent;
-  outline: none;
-  font-size: 0.875rem;
-  color: #000;
-
-  &::placeholder {
-    color: #6b7280;
-  }
-`;
-
-const Dropdown = styled.ul`
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-  margin-top: 0.5rem;
-  background-color: #fff;
-  border-radius: 0.375rem;
-  border: 1px solid #d1d5db;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-height: 15rem;
-  overflow-y: auto;
-`;
-
-const Item = styled.li`
-  padding: 0.5rem;
-  font-size: 0.875rem;
-  cursor: pointer;
-
-  &:hover, &.active {
-    background-color: #f3f4f6;
-  }
-`;
 
 export default function BuscaNav() {
   const [busca, setBusca] = useState("");
