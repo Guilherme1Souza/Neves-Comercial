@@ -72,7 +72,9 @@ export default function Header() {
         <IconGroupDesktop>
           <IconItem>
             <IoIosHelpCircleOutline size={24} color="#facc15" />
+            <Link href={`#`} passHref>
             <IconLabel>Central de ajuda</IconLabel>
+            </Link>
           </IconItem>
           <IconItem>
             <IoIosCall size={24} color="#facc15" />
@@ -161,11 +163,15 @@ export default function Header() {
           <IconGroupMobile>
             <IconItem>
               <IoIosHelpCircleOutline size={24} color="#facc15" />
+               <Link href={`#`} passHref>
               <IconLabel>Central de ajuda</IconLabel>
+              </Link>
             </IconItem>
             <IconItem>
               <IoIosCall size={24} color="#facc15" />
+               <Link href={`#`} passHref>
               <IconLabel>Canais de atendimento</IconLabel>
+              </Link>
             </IconItem>
           </IconGroupMobile>
         </MobileMenu>
