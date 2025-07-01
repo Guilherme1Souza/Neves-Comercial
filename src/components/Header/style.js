@@ -216,6 +216,7 @@ export const MobileMenuToggle = styled.button`
 
 export const MobileMenu = styled.div`
   display: none;
+  
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
@@ -266,7 +267,11 @@ export const DepartamentosMenu = styled.div`
     }
 
     div {
-      padding-left: 0.5rem;
+      padding-left: 0rem;
+
+      &:hover {
+        color: #0c4a6e;
+      }
     }
   }
 `;

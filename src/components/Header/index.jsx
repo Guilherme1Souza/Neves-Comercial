@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import departamentos from "@data/departamentos.json";
+import Link from "next/link";
 import Image from "next/image";
 import BuscaNav from "../BuscaNav";
 import { IoIosHelpCircleOutline, IoIosCall } from "react-icons/io";
@@ -32,8 +33,9 @@ export default function Header() {
   const [showSubnav, setShowSubnav] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDeptoMenuOpen, setIsDeptoMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const subnavRef = useRef(null);
-  
+
   // Fecha o subnav ao clicar fora
   useEffect(() => {
     function handleClickOutside(e) {
@@ -47,6 +49,11 @@ export default function Header() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  useEffect(() => {
+    console.log("Departamentos:", departamentos);
+  }, []);
+
+
   return (
     <HeaderWrapper>
       <TopBar>
@@ -54,13 +61,13 @@ export default function Header() {
       </TopBar>
       <HeaderContent>
         <HeaderWrapperTwo>
-        <LogoContainer>
-          <Image src={Logo} alt="Logo" width={50} height={50} />
-          <LogoText>
-            NEVES<br />COMERCIAL
-          </LogoText>
-        </LogoContainer>
-        <BuscaNav />
+          <LogoContainer>
+            <Image src={Logo} alt="Logo" width={50} height={50} />
+            <LogoText>
+              NEVES<br />COMERCIAL
+            </LogoText>
+          </LogoContainer>
+          <BuscaNav />
         </HeaderWrapperTwo>
         <IconGroupDesktop>
           <IconItem>
@@ -69,7 +76,9 @@ export default function Header() {
           </IconItem>
           <IconItem>
             <IoIosCall size={24} color="#facc15" />
-            <IconLabel>Canais de atendimento</IconLabel>
+            <Link href={`#`} passHref>
+              <IconLabel>Canais de atendimento</IconLabel>
+            </Link>
           </IconItem>
         </IconGroupDesktop>
         <MobileMenuToggle onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -83,38 +92,72 @@ export default function Header() {
             Todos os departamentos
           </NavItemContent>
           <SubNav show={showSubnav}>
-            {departamentos.map((modulo) => (
+            {departamentos.departamentos.map((modulo) => (
               <ModuleWrapper key={modulo.modulo}>
                 <ModuleTitle>{modulo.modulo}</ModuleTitle>
                 {modulo.itens.map((dep) => (
-                  <SubNavItem key={dep.slug}>{dep.nome}</SubNavItem>
+                  <Link href={`/departamento/${dep.slug}`} passHref key={dep.slug}>
+                    <SubNavItem>{dep.nome}</SubNavItem>
+                  </Link>
                 ))}
               </ModuleWrapper>
             ))}
           </SubNav>
         </NavItem>
-        <NavItem>Revestimentos e Tintas</NavItem>
-        <NavItem>Aquecedores</NavItem>
-        <NavItem>Manutenção</NavItem>
-        <NavItem>Iluminação</NavItem>
-        <NavItem>Filtros</NavItem>
-        <NavItem>Pisos</NavItem>
-        <NavItem>Cascatas</NavItem>
-        <NavItem>Nossas Lojas</NavItem>
+        <Link href={`#`} passHref>
+          <NavItem>Revestimentos e Tintas</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Aquecedores</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Manutenção</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Iluminação</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Filtros</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Pisos</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Cascatas</NavItem>
+        </Link>
+        <Link href={`#`} passHref>
+          <NavItem>Nossas Lojas</NavItem>
+        </Link>
       </NavWrapper>
       {isMobileMenuOpen && (
         <MobileMenu>
           <div onClick={() => setIsDeptoMenuOpen(true)}>
             Todos os Departamentos
           </div>
-          <div>Revestimentos e Tintas</div>
-          <div>Aquecedores</div>
-          <div>Manutenção</div>
-          <div>Iluminação</div>
-          <div>Filtros</div>
-          <div>Pisos</div>
-          <div>Cascatas</div>
-          <div>Nossas Lojas</div>
+          <Link href={``} passHref>
+            <div>Revestimentos e Tintas</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Aquecedores</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Manutenção</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Iluminação</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Filtros</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Pisos</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Cascatas</div>
+          </Link>
+          <Link href={`#`} passHref>
+            <div>Nossas Lojas</div>
+          </Link>
           <IconGroupMobile>
             <IconItem>
               <IoIosHelpCircleOutline size={24} color="#facc15" />
@@ -130,11 +173,13 @@ export default function Header() {
       {isDeptoMenuOpen && (
         <DepartamentosMenu>
           <button onClick={() => setIsDeptoMenuOpen(false)}>← Voltar</button>
-          {departamentos.map((modulo) => (
+          {departamentos.departamentos.map((modulo) => (
             <div key={modulo.modulo}>
               <strong>{modulo.modulo}</strong>
               {modulo.itens.map((dep) => (
-                <div key={dep.slug}>{dep.nome}</div>
+                <Link href={`/departamento/${dep.slug}`} passHref key={dep.slug}>
+                  <div>{dep.nome}</div>
+                </Link>
               ))}
             </div>
           ))}

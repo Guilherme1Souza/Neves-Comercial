@@ -1,4 +1,5 @@
-[
+{
+  "departamentos": [
   {
     "modulo": "Materiais de Construção",
     "itens": [
@@ -70,3 +71,4 @@
     ]
   }
 ]
+}
