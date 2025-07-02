@@ -4,8 +4,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   min-height: 100vh;
-  background-color: #ebebeb; 
-  padding: 1.5rem;
+  background-color: #f1f1f1;
 `;
 
 export default function Home() {

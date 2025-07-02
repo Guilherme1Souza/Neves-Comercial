@@ -24,22 +24,24 @@ export const SearchBox = styled.div`
 export const Input = styled.input`
   flex: 1;
   border: none;
-  background: transparent;
+  background-color: #fff; 
   outline: none;
   font-size: 0.875rem;
-  color: #000;
+  color: #fff; 
 
   &::placeholder {
-    color: #6b7280;
+    color:rgb(39, 39, 39); 
+    opacity: 1;
   }
 `;
+
 
 export const Dropdown = styled.ul`
   position: absolute;
   z-index: 10;
   width: 100%;
   margin-top: 0.5rem;
-  background-color: #fff;
+  background-color: #f1f1f1;
   border-radius: 0.375rem;
   border: 1px solid #d1d5db;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
