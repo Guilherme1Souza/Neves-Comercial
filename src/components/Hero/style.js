@@ -13,7 +13,9 @@ export const LogosContainer = styled.div`
   flex-wrap: wrap;
 
   @media (max-width: 768px) {
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
     gap: 20px;
   }
 `;
