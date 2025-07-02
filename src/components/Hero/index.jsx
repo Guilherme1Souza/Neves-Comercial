@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
@@ -5,10 +6,26 @@ import "slick-carousel/slick/slick-theme.css";
 
 import { StyledSliderWrapper, StyledSlider } from './style';
 
-import suvinilSlider from '../../images/suvinilCarrossel.jpg';
-import votoranSlider from '../../images/votoranCarrossel.jpg';
+import suvinilCarrossel from '../../images/suvinilCarrossel.jpg';
+import suvinilCarrosselMobile from '../../images/suvinilCarrosselMobile.jpg';
+import votoranCarrossel from '../../images/votoranCarrossel.jpg';
+import votoranCarrosselMobile from '../../images/votoranCarrosselMobile.jpg';
 
 export default function Hero() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768); // Define ponto de corte para mobile
+  };
+
+  handleResize(); // executa na montagem
+  window.addEventListener('resize', handleResize); // escuta mudanças
+
+  return () => window.removeEventListener('resize', handleResize); // limpa
+}, []);
+
+
   const settings = {
     infinite: true,
     speed: 500,
@@ -24,7 +41,7 @@ export default function Hero() {
       <StyledSlider {...settings}>
         <div>
           <Image
-            src={suvinilSlider}
+            src={isMobile? suvinilCarrosselMobile : suvinilCarrossel}
             alt="Slide 1"
             style={{ width: '100%', height: 'auto' }}
             placeholder="blur"
@@ -32,7 +49,7 @@ export default function Hero() {
         </div>
         <div>
           <Image
-            src={votoranSlider}
+            src={isMobile? votoranCarrosselMobile : votoranCarrossel}
             alt="Slide 2"
             style={{ width: '100%', height: 'auto' }}
             placeholder="blur"
