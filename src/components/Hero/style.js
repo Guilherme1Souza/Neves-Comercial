@@ -6,7 +6,7 @@ export const StyledSliderWrapper = styled.div`
   max-width: 1600px;
   height: 100%;
   margin: 0 auto;
-  border-radius: 8px;
+  border-radius: 18px;
   overflow: hidden;
 `;
 
