@@ -2,18 +2,31 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   padding: 4rem 4rem;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1rem;
+}
 `;
 
 export const Title = styled.h2`
   font-size: 2rem;  
   font-weight: 700;
   color: #333;
+
+   @media (max-width: 768px) {
+    font-size: 1.675rem;
+  }
 `;
 
 export const Subtitle = styled.p`
   color: #4f46e5;
+  font-size: 1.25rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
+
+    @media (max-width: 768px) {
+    font-size: 1.175rem;
+  }
 `;
 
 export const Card = styled.div`
@@ -36,12 +49,12 @@ export const ProductTitle = styled.p`
   color: #1e1e1e;
   font-size: 1rem;
   font-weight: 500;
-  width: 12.6875rem;
+  width: 100%;
   height: 2.3125rem;
   flex-shrink: 0;
   line-height: 1;
-  margin: 1rem auto;
-  text-align: center;
+  margin-block: 1rem;
+  text-align: start;
 `;
 
 export const Price = styled.p`
@@ -54,19 +67,20 @@ export const Price = styled.p`
   color: #1e1e1e;
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-align: start;
 `;
 
 export const OldPrice = styled.span`
   text-decoration: line-through;
   font-size: 0.9rem;
   color: #888;
-  margin-left: 0.5rem;
 `;
 
 export const BuyButton = styled.button`
   background-color: #3b82f6;
-  width: 14.625rem;
+  width: 100%;
   height: 2.5625rem;
   flex-shrink: 0;
   color: #fff;
