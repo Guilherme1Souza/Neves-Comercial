@@ -9,20 +9,30 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-   .slick-prev {
-  left: -40px; 
-  z-index: 1;
-}
+  .slick-prev {
+    left: -40px; 
+    z-index: 1;
+  }
 
-.slick-next {
-  right: -30px; 
-  z-index: 1;
-}
+  .slick-next {
+    right: -30px; 
+    z-index: 1;
+  }
 
   .slick-prev::before,
   .slick-next::before {
     color: #3b82f6;
     font-size: 30px;
+  }
+
+
+  @media (max-width: 768px) {
+    .slick-prev,
+    .slick-next,
+    .slick-prev::before,
+    .slick-next::before {
+      display: none !important;
+    }
   }
 
   body {
@@ -40,10 +50,12 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
+
   img {
     max-width: 100%;
     display: block;
   }
+
   input, button, textarea, select {
     font-family: inherit;
     font-size: 100%;
