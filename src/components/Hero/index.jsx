@@ -10,6 +10,8 @@ import suvinilCarrossel from '../../images/suvinilCarrossel.jpg';
 import suvinilCarrosselMobile from '../../images/suvinilCarrosselMobile.jpg';
 import votoranCarrossel from '../../images/votoranCarrossel.jpg';
 import votoranCarrosselMobile from '../../images/votoranCarrosselMobile.jpg';
+import fortalezaCarrossel from '../../images/fortalCarrossel.jpg';
+import fortalezaCarrosselMobile from '../../images/fortalezaCarrosselMobile.jpg';
 import { FaRegCreditCard } from "react-icons/fa";
 import { BiSolidDiscount } from "react-icons/bi";
 import { BsWhatsapp } from "react-icons/bs";
@@ -90,6 +92,14 @@ export default function Hero() {
                     <div>
                         <Image
                             src={isMobile ? votoranCarrosselMobile : votoranCarrossel}
+                            alt="Slide 2"
+                            style={{ width: '100%', height: 'auto' }}
+                            placeholder="blur"
+                        />
+                    </div>
+                    <div>
+                        <Image
+                            src={isMobile ? fortalezaCarrosselMobile : fortalezaCarrossel}
                             alt="Slide 2"
                             style={{ width: '100%', height: 'auto' }}
                             placeholder="blur"
