@@ -1,10 +1,28 @@
 import { createGlobalStyle } from "styled-components";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+
+   .slick-prev {
+  left: -40px; 
+  z-index: 1;
+}
+
+.slick-next {
+  right: -30px; 
+  z-index: 1;
+}
+
+  .slick-prev::before,
+  .slick-next::before {
+    color: #3b82f6;
+    font-size: 30px;
   }
 
   body {
