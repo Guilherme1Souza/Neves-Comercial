@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Promocoes from "@/components/Promocoes";
 import Marcas from "@/components/Marcas";
 import Testimonials from "@/components/Testimonials";
+import Footer from "@/components/Footer";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -18,6 +19,7 @@ export default function Home() {
       <Promocoes />
       <Marcas />
       <Testimonials />
+      <Footer />
     </Container>
   );
 }
