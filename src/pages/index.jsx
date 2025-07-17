@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import styled from "styled-components";
 import Promocoes from "@/components/Promocoes";
 import Marcas from "@/components/Marcas";
+import Testimonials from "@/components/Testimonials";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero/>
       <Promocoes />
       <Marcas />
+      <Testimonials />
     </Container>
   );
 }
