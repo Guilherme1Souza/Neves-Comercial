@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import Header from "../components/Header";
 import styled from "styled-components";
 import Promocoes from "@/components/Promocoes";
+import Marcas from "@/components/Marcas";
 
 const Container = styled.div`
   min-height: 100vh;
@@ -14,6 +15,7 @@ export default function Home() {
       <Header />
       <Hero/>
       <Promocoes />
+      <Marcas />
     </Container>
   );
 }
