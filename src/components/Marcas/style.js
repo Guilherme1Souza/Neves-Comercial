@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #4f46e5; 
+  background: #3a45f4; 
   padding: 40px 0;
   color: #fff;
   margin-top: 60px;
@@ -17,8 +17,9 @@ export const Title = styled.h2`
   margin-bottom: 30px;
 
   @media (max-width: 600px) {
-    font-size: 20px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin-left: 20px;
+    margin-bottom: 40px;
   }
 `;
 
@@ -88,11 +89,10 @@ export const BrandCircle = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
   }
 
-  /* Se você ainda usar <img> em vez de <Image> */
   img,
   span > img {
     max-width: 100%;
