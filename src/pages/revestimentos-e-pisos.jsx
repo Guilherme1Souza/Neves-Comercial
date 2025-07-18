@@ -5,10 +5,17 @@ import Footer from "@/components/Footer";
 import { produtosRevestimentos } from "@/../data/produtosRevestimentos";
 
 const Container = styled.div`
-  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;
+  background-color: #f1f1f1;
 `;
+
+export const BoxProducts = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+`;
+
 const Titulo = styled.h1`
   text-align: center;
   font-size: 2rem;
@@ -97,7 +104,7 @@ const Pagination = styled.div`
 export default function RevestimentosePisos() {
   const [ordem, setOrdem] = useState("");
   const [paginaAtual, setPaginaAtual] = useState(1);
-  const itensPorPagina = 8; 
+  const itensPorPagina = 8;
 
   const produtosOrdenados = ordenar(produtosRevestimentos, ordem);
 
@@ -124,38 +131,40 @@ export default function RevestimentosePisos() {
 
   return (
     <>
-      <Header />
       <Container>
-        <Titulo>Revestimentos e Pisos</Titulo>
-        <Controls>
-          <select value={ordem} onChange={(e) => setOrdem(e.target.value)}>
-            <option value="">Ordenar por</option>
-            <option value="menor-preco">Menor preço</option>
-            <option value="maior-preco">Maior preço</option>
-          </select>
-        </Controls>
-        <Grid>
-          {produtosPaginados.map((produto, index) => (
-            <Card key={index}>
-              <img src={produto.imagem.src} alt={produto.nome} />
-              <p>{produto.nome}</p>
-              <PrecoAtual>{produto.precoAtual}</PrecoAtual>
-              <PrecoAntigo>{produto.precoAntigo}</PrecoAntigo>
-              <Botao>COMPRAR</Botao>
-            </Card>
-          ))}
-        </Grid>
-        <Pagination>
-          {Array.from({ length: totalPaginas }, (_, i) => (
-            <button
-              key={i + 1}
-              className={paginaAtual === i + 1 ? "active" : ""}
-              onClick={() => setPaginaAtual(i + 1)}
-            >
-              {i + 1}
-            </button>
-          ))}
-        </Pagination>
+        <Header />
+        <BoxProducts>
+          <Titulo>Revestimentos e Pisos</Titulo>
+          <Controls>
+            <select value={ordem} onChange={(e) => setOrdem(e.target.value)}>
+              <option value="">Ordenar por</option>
+              <option value="menor-preco">Menor preço</option>
+              <option value="maior-preco">Maior preço</option>
+            </select>
+          </Controls>
+          <Grid>
+            {produtosPaginados.map((produto, index) => (
+              <Card key={index}>
+                <img src={produto.imagem.src} alt={produto.nome} />
+                <p>{produto.nome}</p>
+                <PrecoAtual>{produto.precoAtual}</PrecoAtual>
+                <PrecoAntigo>{produto.precoAntigo}</PrecoAntigo>
+                <Botao>COMPRAR</Botao>
+              </Card>
+            ))}
+          </Grid>
+          <Pagination>
+            {Array.from({ length: totalPaginas }, (_, i) => (
+              <button
+                key={i + 1}
+                className={paginaAtual === i + 1 ? "active" : ""}
+                onClick={() => setPaginaAtual(i + 1)}
+              >
+                {i + 1}
+              </button>
+            ))}
+          </Pagination>
+        </BoxProducts>
       </Container>
       <Footer />
     </>
