@@ -61,12 +61,14 @@ export default function Header() {
       </TopBar>
       <HeaderContent>
         <HeaderWrapperTwo>
-          <LogoContainer>
-            <Image src={Logo} alt="Logo" width={50} height={50} />
-            <LogoText>
-              NEVES<br />COMERCIAL
-            </LogoText>
-          </LogoContainer>
+          <Link href={`/`} passHref>
+            <LogoContainer>
+              <Image src={Logo} alt="Logo" width={50} height={50} />
+              <LogoText>
+                NEVES<br />COMERCIAL
+              </LogoText>
+            </LogoContainer>
+          </Link>
           <BuscaNav />
         </HeaderWrapperTwo>
         <IconGroupDesktop>
