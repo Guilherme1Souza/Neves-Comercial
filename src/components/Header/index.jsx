@@ -111,7 +111,7 @@ export default function Header() {
         <Link href="/revestimentos-e-pisos" passHref>
           <div>Revestimentos e Pisos</div>
         </Link>
-        <Link href={`#`} passHref>
+        <Link href={`/aquecedores`} passHref>
           <NavItem>Aquecedores</NavItem>
         </Link>
         <Link href={`#`} passHref>

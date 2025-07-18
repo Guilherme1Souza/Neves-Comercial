@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { produtosRevestimentos } from "@data/products/produtosRevestimentos";
+import { produtosAquecedores } from "@data/products/aquecedores";
 
 const Container = styled.div`
   margin: 0 auto;
@@ -122,12 +122,12 @@ const Pagination = styled.div`
   }
 `;
 
-export default function RevestimentosePisos() {
+export default function AquecedoresPage() {
   const [ordem, setOrdem] = useState("");
   const [paginaAtual, setPaginaAtual] = useState(1);
   const itensPorPagina = 8;
 
-  const produtosOrdenados = ordenar(produtosRevestimentos, ordem);
+  const produtosOrdenados = ordenar(produtosAquecedores, ordem);
 
   const totalPaginas = Math.ceil(produtosOrdenados.length / itensPorPagina);
   const indexInicial = (paginaAtual - 1) * itensPorPagina;
@@ -156,7 +156,7 @@ export default function RevestimentosePisos() {
         <Header />
         <Line />
         <BoxProducts>
-          <Titulo>Revestimentos e Pisos</Titulo>
+          <Titulo>Aquecedores</Titulo>
 
           <Controls>
             <select value={ordem} onChange={(e) => setOrdem(e.target.value)}>
