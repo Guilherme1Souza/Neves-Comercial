@@ -26,7 +26,7 @@ export const LogoItem = styled.div`
   gap: 12px;
 
    svg {
-    color: #f4e453; /* amarelo */
+    color: ${({ theme }) => theme.colors.secondary};
     font-size: 2rem;
   }
 `;
@@ -37,13 +37,13 @@ export const TextBlock = styled.div`
   line-height: 1.2;
 
   strong {
-    color: #3a45f4; /* azul */
+    color: ${({ theme }) => theme.colors.primary};
     font-weight: bold;
   }
 
   span {
     font-size: 0.85rem;
-    color: #3a45f4;
+    color: ${({ theme }) => theme.colors.primary};
   }
 
  

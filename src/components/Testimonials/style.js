@@ -6,6 +6,7 @@ export const Container = styled.section`
   width: 100%;
   max-width: 1200px;
   margin-top: 3.8rem;
+  margin-bottom: 3.8rem;
   margin-inline: auto;
 `;
 
@@ -17,7 +18,7 @@ export const Header = styled.div`
 export const Title = styled.h2`
   font-size: 2rem;  
   font-weight: 700;
-  color: #333;
+  color: ${({ theme }) => theme.colors.gray};
 
    @media (max-width: 768px) {
     font-size: 1.675rem;
@@ -25,7 +26,7 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
- color: #4f46e5;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 1.05rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
@@ -58,7 +59,7 @@ export const Card = styled.div`
   align-items: center;
   border-radius: 0.5rem;
   border: 1px solid #D9D9D9;
-  background: #FFF;
+  background: ${({ theme }) => theme.colors.background};
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
 
   @media (max-width: 768px) {
@@ -73,7 +74,7 @@ export const Stars = styled.div`
 `;
 
 export const Company = styled.h3`
-  color: #000;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
@@ -82,7 +83,7 @@ export const Company = styled.h3`
 `;
 
 export const Text = styled.p`
- color: #000;
+ color: ${({ theme }) => theme.colors.text};
  text-align: center;
  font-size: 0.75rem;
  font-style: normal;

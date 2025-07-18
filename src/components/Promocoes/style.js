@@ -11,7 +11,7 @@ export const Container = styled.div`
 export const Title = styled.h2`
   font-size: 2rem;  
   font-weight: 700;
-  color: #333;
+  color: ${({ theme }) => theme.colors.gray};
 
    @media (max-width: 768px) {
     font-size: 1.675rem;
@@ -19,7 +19,7 @@ export const Title = styled.h2`
 `;
 
 export const Subtitle = styled.p`
-  color: #4f46e5;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 1.25rem;
   margin-bottom: 4rem;
   margin-top: 0.5rem;
@@ -30,7 +30,7 @@ export const Subtitle = styled.p`
 `;
 
 export const Card = styled.div`
-  background: #fff;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 8px;
   padding: 1rem;
   margin: 0 auto;
@@ -46,7 +46,7 @@ export const Card = styled.div`
 
 
 export const ProductTitle = styled.p`
-  color: #1e1e1e;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 1rem;
   font-weight: 500;
   width: 100%;
@@ -64,7 +64,7 @@ export const Price = styled.p`
   text-align: center;
   height: 1rem;
   flex-shrink: 0;
-  color: #1e1e1e;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 1rem;
   font-weight: 500;
   margin-top: 1rem;
@@ -75,11 +75,11 @@ export const Price = styled.p`
 export const OldPrice = styled.span`
   text-decoration: line-through;
   font-size: 0.9rem;
-  color: #888;
+  color: ${({ theme }) => theme.colors.gray};
 `;
 
 export const BuyButton = styled.button`
-  background-color: #3b82f6;
+  background-color: ${({ theme }) => theme.colors.primary};
   width: 100%;
   height: 2.5625rem;
   flex-shrink: 0;
@@ -92,6 +92,6 @@ export const BuyButton = styled.button`
   font-weight: bold;
 
   &:hover {
-    background-color: #2563eb;
+    background-color: ${({ theme }) => theme.hover.primary};
   }
 `;

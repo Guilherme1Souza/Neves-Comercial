@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  background: #3a45f4; 
+  background: ${({ theme }) => theme.colors.primary}; 
   padding: 40px 0;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   margin-top: 60px;
 
   @media (max-width: 600px) {
@@ -59,13 +59,13 @@ export const BrandsTrack = styled.div`
 export const ArrowButton = styled.button`
   background: none;
   border: none;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   font-size: 28px;
   cursor: pointer;
   transition: 0.3s;
 
   &:hover {
-    color: #ddd;
+     color: ${({ theme }) => theme.colors.gray};
   }
 
   @media (max-width: 600px) {
@@ -76,7 +76,7 @@ export const ArrowButton = styled.button`
 export const BrandCircle = styled.div`
   width: 140px;
   height: 140px;
-  background: #fff;
+  background: ${({ theme }) => theme.colors.white};
   border-radius: 50%;
   display: flex;
   align-items: center;

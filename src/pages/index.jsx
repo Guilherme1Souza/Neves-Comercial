@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 const Container = styled.div`
   min-height: 100vh;
-  background-color: #f1f1f1;
+  background-color: ${({ theme }) => theme.colors.background};
 `;
 
 export default function Home() {

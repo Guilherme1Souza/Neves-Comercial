@@ -12,7 +12,7 @@ export const SearchBox = styled.div`
   border: 1px solid #d1d5db;
   border-radius: 9999px;
   padding: 0.5rem 1rem;
-  background-color: #fff;
+  background: ${({ theme }) => theme.colors.white};
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 
   &:focus-within {
@@ -24,10 +24,10 @@ export const SearchBox = styled.div`
 export const Input = styled.input`
   flex: 1;
   border: none;
-  background-color: #fff; 
+  background: ${({ theme }) => theme.colors.white};
   outline: none;
   font-size: 0.875rem;
-  color: #000; 
+  color: ${({ theme }) => theme.colors.text}; 
 
   &::placeholder {
     color:rgb(39, 39, 39); 
@@ -41,7 +41,7 @@ export const Dropdown = styled.ul`
   z-index: 10;
   width: 100%;
   margin-top: 0.5rem;
-  background-color: #f1f1f1;
+  background: ${({ theme }) => theme.colors.background};
   border-radius: 0.375rem;
   border: 1px solid #d1d5db;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -56,6 +56,6 @@ export const Item = styled.li`
 
   &:hover,
   &.active {
-    background-color: #f3f4f6;
+   background: ${({ theme }) => theme.colors.white};
   }
 `;

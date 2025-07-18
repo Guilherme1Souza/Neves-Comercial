@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.footer`
-  background-color: #4338ca;
-  color: #fff;
+  background-color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   padding-block: 40px;
 
   @media (max-width: 600px) {
@@ -56,7 +56,7 @@ export const PaymentMethods = styled.div`
   font-size: 2rem;
 
   svg {
-    color: #4338ca;
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -67,21 +67,17 @@ export const SocialMedia = styled.div`
   margin-bottom: 20px;
 
   a {
-    color: #4338ca;
+    color: ${({ theme }) => theme.colors.primary};
     transition: 0.3s;
-  }
-
-  a:hover {
-    color: #111;
   }
 `;
 
 export const InfoSection = styled.div`
-  background-color: #fff;
+  background-color: ${({ theme }) => theme.colors.white};
   text-align: center;
   padding: 20px 10px;
   font-size: 14px;
-  color: #333;
+  color: ${({ theme }) => theme.colors.text};
   line-height: 1.5;
 
   p {
@@ -98,10 +94,10 @@ export const InfoContent = styled.div`
 `;
 
 export const DeveloperBar = styled.div`
-  background-color: #4338ca;
+  background-color: ${({ theme }) => theme.colors.primary};
   text-align: center;
   padding: 4px 0;
-  color: #fff;
+  color: ${({ theme }) => theme.colors.white};
   font-size: 14px;
   font-weight: 500;
   line-height: 1;

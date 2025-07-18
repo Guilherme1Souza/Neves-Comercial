@@ -20,14 +20,14 @@ const Titulo = styled.h1`
   text-align: center;
   font-size: 2rem;
   margin-bottom: 2rem;
-  color: #3b82f6;
+  color: ${({ theme }) => theme.colors.primary};
 `;
 
 const Line = styled.div`
   max-width: 2000px;
   height: 2px;
   margin: 2rem 0;
-  background: #D9D9D9;
+  background: ${({ theme }) => theme.colors.grayLight};
 `;
 
 const Controls = styled.div`
@@ -48,7 +48,7 @@ const Grid = styled.div`
 `;
 
 const Card = styled.div`
-  background: #fff;
+  background: ${({ theme }) => theme.colors.white};
   border: 1px solid #e5e7eb;
   border-radius: 8px;
   text-align: center;
@@ -76,18 +76,18 @@ const Card = styled.div`
 
 
 const PrecoAtual = styled.div`
-  color: #111827;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 1.2rem;
   font-weight: bold;
 `;
 const PrecoAntigo = styled.div`
   text-decoration: line-through;
-  color: #9ca3af;
+  color: ${({ theme }) => theme.colors.gray};
   margin-bottom: 1rem;
 `;
 const Botao = styled.button`
-  background: #3b82f6;
-  color: #fff;
+  background: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.white};
   border: none;
   border-radius: 4px;
   padding: 0.75rem 1rem;
@@ -96,7 +96,7 @@ const Botao = styled.button`
   width: 100%;
   transition: 0.3s;
   &:hover {
-    background: #2563eb;
+    background: ${({ theme }) => theme.hover.primary};
   }
 `;
 
@@ -105,19 +105,19 @@ const Pagination = styled.div`
   justify-content: center;
   gap: 0.5rem;
   margin-top: 2rem;
+
   button {
     padding: 0.5rem 0.8rem;
-    border: 1px solid #ccc;
+    border: none;
     border-radius: 4px;
-    background: #fff;
     cursor: pointer;
     &:hover {
-      background: #3b82f6;
-      color: #fff;
+      background: ${({ theme }) => theme.hover.primary};
+      color: ${({ theme }) => theme.colors.white};
     }
     &.active {
-      background: #3b82f6;
-      color: #fff;
+      background: ${({ theme }) => theme.hover.primary};
+      color: ${({ theme }) => theme.colors.white};
     }
   }
 `;
@@ -154,10 +154,10 @@ export default function RevestimentosePisos() {
     <>
       <Container>
         <Header />
-         <Line/>
+        <Line />
         <BoxProducts>
           <Titulo>Revestimentos e Pisos</Titulo>
-         
+
           <Controls>
             <select value={ordem} onChange={(e) => setOrdem(e.target.value)}>
               <option value="">Ordenar por</option>

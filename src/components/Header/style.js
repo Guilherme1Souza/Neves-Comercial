@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.header`
 `;
 
 export const TopBar = styled.div`
-  background-color: #2563eb;
+  background: ${({ theme }) => theme.colors.primary};
   color: white;
   font-size: 0.875rem;
   text-align: center;
@@ -75,7 +75,7 @@ export const IconGroup = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-  color: #facc15;
+  color: ${({ theme }) => theme.colors.secondary};
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -97,7 +97,7 @@ export const IconGroupDesktop = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-  color: #facc15;
+  color: ${({ theme }) => theme.colors.secondary};
 
   @media (max-width: 768px) {
     display: none;
@@ -111,13 +111,13 @@ export const IconGroupMobile = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    color: #facc15;
+    color: ${({ theme }) => theme.colors.secondary};
     margin-top: 2rem;
   }
 `;
 
 export const IconLabel = styled.span`
-  color: #374151;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 0.875rem;
   line-height: 1;
 `;
@@ -127,7 +127,7 @@ export const NavWrapper = styled.nav`
   justify-content: center;
   gap: 3.5rem;
   font-size: 0.875rem;
-  color: #374151;
+  color: ${({ theme }) => theme.colors.text};
   padding: 0.75rem 0;
   position: relative;
 
@@ -180,7 +180,7 @@ export const ModuleWrapper = styled.div`
 
 export const ModuleTitle = styled.strong`
   font-size: 1.1rem;
-  color: #0c4a6e;
+  color: ${({ theme }) => theme.colors.primary};
   font-weight: 700;
   margin-bottom: 0.5rem;
   padding-bottom: 0.15rem;
@@ -189,13 +189,13 @@ export const ModuleTitle = styled.strong`
 
 export const SubNavItem = styled.div`
   font-size: 0.9rem;
-  color: #1e293b;
+  color: ${({ theme }) => theme.colors.text};
   cursor: pointer;
   padding: 0.15rem 0;
   transition: color 0.2s;
 
   &:hover {
-    color: #2563eb;
+   color: ${({ theme }) => theme.hover.primary};
   }
 `;
 
@@ -229,7 +229,7 @@ export const MobileMenu = styled.div`
     z-index: 1500;
     gap: 1rem;
     font-size: 1.1rem;
-    color: #1e293b;
+    color: ${({ theme }) => theme.colors.text};
   }
 `;
 
@@ -254,13 +254,13 @@ export const DepartamentosMenu = styled.div`
       background: none;
       border: none;
       font-size: 1rem;
-      color: #2563eb;
+      color: ${({ theme }) => theme.colors.primary};
       margin-bottom: 1rem;
       cursor: pointer;
     }
 
     strong {
-      color: #0c4a6e;
+      color: ${({ theme }) => theme.colors.text};
       margin-top: 1rem;
       margin-bottom: 0.3rem;
     }
@@ -269,7 +269,7 @@ export const DepartamentosMenu = styled.div`
       padding-left: 0rem;
 
       &:hover {
-        color: #0c4a6e;
+        color: ${({ theme }) => theme.hover.primary};
       }
     }
   }
