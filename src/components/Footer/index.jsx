@@ -52,10 +52,10 @@ const Footer = () => {
                     <Column>
                         <Title>Loja Vila Dionísia</Title>
                         <Text>Rua Gomes Leal, 570 - Vila Dionísia - São Paulo, SP, 02671-090</Text>
-                        <Text>Segunda a sexta das 08h às 17h, aos sábados das 09h às 14h.</Text>
+                        <Text>Segunda a sexta das 08h às 18h, aos sábados das 08h às 13h.</Text>
                         <Title>Loja Parque Mandaqui</Title>
                         <Text>Rua Alfredo Zumkeller, 645 - Parque Mandaqui - São Paulo, SP, 02421-070</Text>
-                        <Text>Segunda a sexta das 08h às 17h, aos sábados das 09h às 14h.</Text>
+                        <Text>Segunda a sexta das 08h às 18h, aos sábados das 08h às 13h.</Text>
                     </Column>
                 </FooterWrapper>
             </Container>
