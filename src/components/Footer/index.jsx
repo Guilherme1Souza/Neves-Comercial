@@ -29,10 +29,8 @@ import { SiPix } from "react-icons/si";
 const Footer = () => {
     return (
         <>
-            {/* Área Azul com links */}
             <Container>
                 <FooterWrapper>
-                    {/* Coluna 1 - Institucional */}
                     <Column>
                         <Title>Institucional</Title>
                         <LinkItem>Quem Somos</LinkItem>
@@ -43,30 +41,24 @@ const Footer = () => {
                         <LinkItem>Dúvidas Frequentes</LinkItem>
                         <LinkItem>Trabalhe Conosco</LinkItem>
                     </Column>
-
-                    {/* Coluna 2 - Contato */}
                     <Column>
                         <Title>Contato</Title>
                         <Text><FaPhoneAlt /> (11) 4329-8668 / WhatsApp: (11) 97487-7861 - Loja 1</Text>
                         <Text><FaPhoneAlt /> (11) 2208-0925 / WhatsApp: (11) 97503-4650 - Loja 2</Text>
-                        <Text><FaPhoneAlt /> (11) 2198-5512 - Loja 3</Text>
-                        <Text><FaEnvelope /> contato.neves-comercial@gmail.com</Text>
-                        <Text><FaEnvelope /> trocas.neves-comercial@gmail.com</Text>
-                        <Text><FaEnvelope /> devoluções.neves-comercial@gmail.com</Text>
+                        <Text><FaEnvelope /> eduardo@nevescomercial.com.br</Text>
+                        <Text><FaEnvelope /> aldo@nevescomercial.com.br</Text>
+                        <Text><FaEnvelope /> financeiro@nevescomercial.com.br</Text>
                     </Column>
-
-                    {/* Coluna 3 - Lojas */}
                     <Column>
-                        <Title>Loja Matriz</Title>
-                        <Text>Av. João Kubitscheck, 1266 - Centro/SP</Text>
+                        <Title>Loja Vila Dionísia</Title>
+                        <Text>Rua Gomes Leal, 570 - Vila Dionísia - São Paulo, SP, 02671-090</Text>
                         <Text>Segunda a sexta das 08h às 17h, aos sábados das 09h às 14h.</Text>
-                        <Title>Loja Centro</Title>
-                        <Text>Av. João Kubitscheck, 1266 - Centro/SP</Text>
+                        <Title>Loja Parque Mandaqui</Title>
+                        <Text>Rua Alfredo Zumkeller, 645 - Parque Mandaqui - São Paulo, SP, 02421-070</Text>
                         <Text>Segunda a sexta das 08h às 17h, aos sábados das 09h às 14h.</Text>
                     </Column>
                 </FooterWrapper>
             </Container>
-
             <InfoSection>
                 <InfoContent>
                     <div>
