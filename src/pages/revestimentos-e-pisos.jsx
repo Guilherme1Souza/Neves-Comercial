@@ -32,11 +32,13 @@ const Controls = styled.div`
     border-radius: 6px;
   }
 `;
+
 const Grid = styled.div`
   display: grid;
   gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 `;
+
 const Card = styled.div`
   background: #fff;
   border: 1px solid #e5e7eb;
@@ -44,16 +46,27 @@ const Card = styled.div`
   text-align: center;
   padding: 1rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
   img {
     max-width: 100%;
     height: auto;
     margin-bottom: 1rem;
   }
+
   p {
     font-size: 0.95rem;
     margin-bottom: 0.5rem;
   }
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
 `;
+
+
 const PrecoAtual = styled.div`
   color: #111827;
   font-size: 1.2rem;
