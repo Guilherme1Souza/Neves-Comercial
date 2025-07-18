@@ -22,6 +22,14 @@ const Titulo = styled.h1`
   margin-bottom: 2rem;
   color: #3b82f6;
 `;
+
+const Line = styled.div`
+  max-width: 2000px;
+  height: 2px;
+  margin: 2rem 0;
+  background: #D9D9D9;
+`;
+
 const Controls = styled.div`
   display: flex;
   justify-content: flex-end;
@@ -146,8 +154,10 @@ export default function RevestimentosePisos() {
     <>
       <Container>
         <Header />
+         <Line/>
         <BoxProducts>
           <Titulo>Revestimentos e Pisos</Titulo>
+         
           <Controls>
             <select value={ordem} onChange={(e) => setOrdem(e.target.value)}>
               <option value="">Ordenar por</option>
