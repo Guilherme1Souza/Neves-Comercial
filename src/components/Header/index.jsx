@@ -73,7 +73,7 @@ export default function Header() {
           <IconItem>
             <IoIosHelpCircleOutline size={24} color="#facc15" />
             <Link href={`#`} passHref>
-            <IconLabel>Central de ajuda</IconLabel>
+              <IconLabel>Central de ajuda</IconLabel>
             </Link>
           </IconItem>
           <IconItem>
@@ -106,8 +106,8 @@ export default function Header() {
             ))}
           </SubNav>
         </NavItem>
-        <Link href={`#`} passHref>
-          <NavItem>Revestimentos e Tintas</NavItem>
+        <Link href="/revestimentos-e-pisos" passHref>
+          <div>Revestimentos e Pisos</div>
         </Link>
         <Link href={`#`} passHref>
           <NavItem>Aquecedores</NavItem>
@@ -136,8 +136,8 @@ export default function Header() {
           <div onClick={() => setIsDeptoMenuOpen(true)}>
             Todos os Departamentos
           </div>
-          <Link href={``} passHref>
-            <div>Revestimentos e Tintas</div>
+          <Link href="/revestimentos-e-pisos" passHref>
+            <div>Revestimentos e Pisos</div>
           </Link>
           <Link href={`#`} passHref>
             <div>Aquecedores</div>
@@ -163,14 +163,14 @@ export default function Header() {
           <IconGroupMobile>
             <IconItem>
               <IoIosHelpCircleOutline size={24} color="#facc15" />
-               <Link href={`#`} passHref>
-              <IconLabel>Central de ajuda</IconLabel>
+              <Link href={`#`} passHref>
+                <IconLabel>Central de ajuda</IconLabel>
               </Link>
             </IconItem>
             <IconItem>
               <IoIosCall size={24} color="#facc15" />
-               <Link href={`#`} passHref>
-              <IconLabel>Canais de atendimento</IconLabel>
+              <Link href={`#`} passHref>
+                <IconLabel>Canais de atendimento</IconLabel>
               </Link>
             </IconItem>
           </IconGroupMobile>
