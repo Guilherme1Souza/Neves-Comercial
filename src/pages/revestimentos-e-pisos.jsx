@@ -57,9 +57,10 @@ const Card = styled.div`
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 
-  img {
+   img {
+    margin: 0 auto;
     max-width: 100%;
-    height: auto;
+    height: 200px;
     margin-bottom: 1rem;
   }
 

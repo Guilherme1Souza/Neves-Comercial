@@ -58,8 +58,9 @@ const Card = styled.div`
   cursor: pointer;
 
   img {
+    margin: 0 auto;
     max-width: 100%;
-    height: auto;
+    height: 200px;
     margin-bottom: 1rem;
   }
 
