@@ -3,36 +3,6 @@ import aquecedoresImg from "@/images/aquecedores/aquecedores.png";
 export const produtosAquecedores = [
   {
     imagem: aquecedoresImg,
-    nome: "Aquecedor elétrico compacto",
-    precoAtual: "R$ 399,99 à vista",
-    precoAntigo: "R$ 450,00",
-  },
-  {
-    imagem: aquecedoresImg,
-    nome: "Aquecedor de água 110V",
-    precoAtual: "R$ 350,00 à vista",
-    precoAntigo: "R$ 400,00",
-  },
-  {
-    imagem: aquecedoresImg,
-    nome: "Aquecedor com controle digital",
-    precoAtual: "R$ 299,90 à vista",
-    precoAntigo: "R$ 350,00",
-  },
-  {
-    imagem: aquecedoresImg,
-    nome: "Aquecedor de passagem com ducha",
-    precoAtual: "R$ 479,90 à vista",
-    precoAntigo: "R$ 530,00",
-  },
-  {
-    imagem: aquecedoresImg,
-    nome: "Aquecedor inox de alta potência",
-    precoAtual: "R$ 599,90 à vista",
-    precoAntigo: "R$ 650,00",
-  },
-  {
-    imagem: aquecedoresImg,
     nome: "Aquecedor misturador luxo",
     precoAtual: "R$ 699,00 à vista",
     precoAntigo: "R$ 760,00",
